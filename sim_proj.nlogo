@@ -1,9 +1,33 @@
-to setup
+breed [voters voter]
+breed [candidates candidate]
+breed [circles circle]
+
+
+to setup_voters
   clear-all
-  create-turtles 100
-  ask turtles [
+  create-voters 100
+  ask voters [
     set xcor random-xcor
     set ycor random-ycor
+  ]
+end
+
+to setup_votee
+  create-candidates 3
+  ask candidates [
+    let x random-xcor
+    let y random-ycor
+
+    set xcor x
+    set ycor y
+    set shape "airplane"
+    set size 3
+
+    create-circles 1
+    ask circles [
+     set xcor x
+     set ycor y
+    ]
   ]
 end
 @#$#@#$#@
@@ -40,7 +64,24 @@ BUTTON
 187
 154
 NIL
-Setup\n\n
+Setup_voters\n\n
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+59
+172
+193
+244
+NIL
+setup_votee\n
 NIL
 1
 T
