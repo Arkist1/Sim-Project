@@ -1,4 +1,11 @@
-
+to setup
+  clear-all
+  create-turtles 100
+  ask turtles [
+    set xcor random-xcor
+    set ycor random-ycor
+  ]
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -26,6 +33,23 @@ GRAPHICS-WINDOW
 1
 ticks
 30.0
+
+BUTTON
+56
+93
+187
+154
+NIL
+Setup\n\n
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
 
 @#$#@#$#@
 ## WHAT IS IT?
